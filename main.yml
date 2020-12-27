@@ -1,0 +1,10 @@
+---
+- name: Building Docker image
+  hosts: docker-node
+  roles:
+    - role: build-docker-image
+      docker_file: 
+        - file_name: centos
+          image_name: centos:8
+        - file_name: ubuntu
+          image_name: ubuntu:latest
